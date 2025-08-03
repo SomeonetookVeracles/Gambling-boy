@@ -1604,24 +1604,28 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_Slide_DPDT"
+		(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0)
+				(offset 1.016)
 				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "SW"
-				(at 0 6.858 0)
+				(at 1.27 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "SW_Slide_DPDT"
-				(at 0 -8.128 0)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1629,7 +1633,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 13.97 5.08 0)
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1638,6 +1642,15 @@
 				)
 			)
 			(property "Datasheet" "~"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1646,7 +1659,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Slide Switch, dual pole double throw"
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1655,18 +1668,9 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "switch dual-pole double-throw dpdt ON-ON"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "SW_Slide_DPDT_0_0"
+			(symbol "SW_Push_0_1"
 				(circle
-					(center -2.032 5.08)
+					(center -2.032 0)
 					(radius 0.508)
 					(stroke
 						(width 0)
@@ -1676,9 +1680,10 @@
 						(type none)
 					)
 				)
-				(circle
-					(center -2.032 -5.08)
-					(radius 0.508)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -1698,69 +1703,22 @@
 						(type none)
 					)
 				)
-				(circle
-					(center 2.032 -5.08)
-					(radius 0.508)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
 						(type none)
-					)
-				)
-			)
-			(symbol "SW_Slide_DPDT_0_1"
-				(circle
-					(center -2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 5.08)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SW_Slide_DPDT_1_1"
-				(rectangle
-					(start -1.397 5.588)
-					(end -0.762 -0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.762 5.588)
-					(end 1.397 -0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "A"
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1776,9 +1734,9 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at 5.08 0 180)
 					(length 2.54)
-					(name "B"
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1786,78 +1744,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 5.08 180)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "B"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -5.08 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2279,7 +2165,7 @@
 			)
 		)
 	)
-	(global_label "SliderVCC"
+	(global_label "BigButton"
 		(shape input)
 		(at 68.58 53.34 180)
 		(fields_autoplaced yes)
@@ -2291,7 +2177,7 @@
 		)
 		(uuid "c03016d5-05c7-47cf-bc43-1b75f44c485c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 57.9484 53.34 0)
+			(at 58.2834 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2323,7 +2209,7 @@
 			)
 		)
 	)
-	(global_label "SliderVCC"
+	(global_label "BigButton"
 		(shape input)
 		(at 38.1 63.5 0)
 		(fields_autoplaced yes)
@@ -2335,7 +2221,7 @@
 		)
 		(uuid "fe8e08b9-5fb8-4333-9251-b99337d78f64")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 48.7316 63.5 0)
+			(at 48.3966 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2686,86 +2572,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_Slide_DPDT")
-		(at 73.66 53.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "37f53300-eddd-4c4e-9d5f-64387db3c847")
-		(property "Reference" "SW1"
-			(at 73.66 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Slider"
-			(at 73.66 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 87.63 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 73.66 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Slide Switch, dual pole double throw"
-			(at 73.66 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "4827c3c9-c4ae-41cb-b1ab-f99215757977")
-		)
-		(pin "4"
-			(uuid "8093ce31-bcfe-4b8a-98bd-d80fa4696cc5")
-		)
-		(pin "2"
-			(uuid "4f1a6993-9b43-446b-a88b-4a11fd29884d")
-		)
-		(pin "3"
-			(uuid "1ed804c1-8708-4313-a177-9e161409ba34")
-		)
-		(pin "1"
-			(uuid "d4d90b46-3cf0-43ee-bc50-c6470da53af8")
-		)
-		(pin "6"
-			(uuid "e0c9f3d9-c0f0-4a2c-bf04-25338101d79a")
-		)
-		(instances
-			(project ""
-				(path "/8196e96f-e27e-4bc5-ba06-5d9fbe0fa610"
-					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 38.1 55.88 90)
 		(unit 1)
@@ -2827,6 +2633,140 @@
 			(project ""
 				(path "/8196e96f-e27e-4bc5-ba06-5d9fbe0fa610"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 78.74 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5084b586-767c-48dd-8306-9dd084dcb637")
+		(property "Reference" "#PWR05"
+			(at 78.74 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 78.74 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 78.74 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ad075bb3-8fca-4fd2-9c93-eac11177823f")
+		)
+		(instances
+			(project ""
+				(path "/8196e96f-e27e-4bc5-ba06-5d9fbe0fa610"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 73.66 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "59343bea-5e9c-4fb3-b3fa-7a72e794d27d")
+		(property "Reference" "SW1"
+			(at 73.66 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 73.66 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 73.66 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 73.66 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 73.66 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d2cf6e52-f6a4-4413-9e12-02aba55c374f")
+		)
+		(pin "1"
+			(uuid "416d4787-c0b1-4178-8aa7-0788883c80ab")
+		)
+		(instances
+			(project ""
+				(path "/8196e96f-e27e-4bc5-ba06-5d9fbe0fa610"
+					(reference "SW1")
 					(unit 1)
 				)
 			)
